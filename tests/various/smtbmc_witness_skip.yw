@@ -1,0 +1,24 @@
+{
+  "format": "Yosys Witness Trace",
+  "generator": "yosys-witness aiw2yw",
+  "clocks": [
+    {"path": ["\\clk_i"], "edge": "posedge", "offset": 0}
+  ],
+  "signals": [
+    {"path": ["\\clk_i"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\req_i"], "width": 2, "offset": 0, "init_only": false},
+    {"path": ["\\rst_ni"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["$auto$async2sync.cc:253:execute$72"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["$past$smtbmc_witness_skip.sv:25$1$0"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["$past$smtbmc_witness_skip.sv:26$2$0"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["$past$smtbmc_witness_skip.sv:26$3$0"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["$past$smtbmc_witness_skip.sv:26$4$0"], "width": 2, "offset": 0, "init_only": true}
+  ],
+  "steps": [
+    {"bits": "000000010000"},
+    {"bits": "1100"},
+    {"bits": "1100"},
+    {"bits": "1010"},
+    {"bits": "0000"}
+  ]
+}

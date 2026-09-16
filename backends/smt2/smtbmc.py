@@ -526,8 +526,6 @@ if cexfile is not None:
             constr_assumes[step].append((cexfile, smtexpr))
 
             if not got_topt:
-                if not check_witness:
-                    skip_steps = max(skip_steps, step)
                 num_steps = max(num_steps, step+1)
 
 if aimfile is not None:
@@ -659,8 +657,6 @@ if aimfile is not None:
                     constr_assumes[step].append((cexfile, smtexpr))
 
             if not got_topt:
-                if not check_witness:
-                    skip_steps = max(skip_steps, step)
                 # some solvers optimize the properties so that they fail one cycle early,
                 # thus we check the properties in the cycle the aiger witness ends, and
                 # if that doesn't work, we check the cycle after that as well.
@@ -869,8 +865,6 @@ if inywfile is not None:
     max_t = ywfile_constraints(inywfile, constr_assumes)
 
     if not got_topt:
-        if not check_witness:
-            skip_steps = max(skip_steps, max_t)
         num_steps = max(num_steps, max_t+1)
 
 if btorwitfile is not None:
